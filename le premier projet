@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace santé
+{
+    internal class Program
+    {
+       
+            static void Main(string[] args)
+            {
+
+                string nom, prenom, vaccin;
+                double taille, poids, imc, dose;
+
+                Console.Write("Entrez le nom du patient : ");
+                nom = Console.ReadLine();
+
+                Console.Write("Entrez le prénom du patient : ");
+                prenom = Console.ReadLine();
+
+                Console.Write("Entrez le poids du patient (en kilo) : ");
+                double Poids = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Entrez la taille du patient (en mètres) : ");
+            taille = Convert.ToDouble(Console.ReadLine());
+
+            imc = Poids / (taille * taille);
+
+                if (imc <= 25)
+                {
+                    dose = 0.5;
+                    vaccin = "Pfizer";
+                }
+                else
+                {
+                    dose = 0.3;
+                    vaccin = "Moderna";
+                }
+
+                Console.WriteLine("Le nom du patient : " + nom);
+                Console.WriteLine("Le prénom du patient : " + prenom);
+                Console.WriteLine("Taille : " + taille);
+                Console.WriteLine("Poids : " + Poids);
+                Console.WriteLine("IMC du patient : " + imc);
+                Console.WriteLine("Dose choisie : " + dose);
+                Console.WriteLine("Vaccin sélectionné : " + vaccin);
+
+            }
+            }
+        }
+    
